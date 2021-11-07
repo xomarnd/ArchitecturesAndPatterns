@@ -8,9 +8,20 @@ import Lesson_5.service.Service
 import Lesson_5.service.ServiceByManager
 import Lesson_5.slot.Slot
 import Lesson_5.slot.SlotByManager
+import java.time.LocalDateTime
 
+class AppointmentFromManager : AppointmentImpl {
+    constructor(id: Long?, createdAt: LocalDateTime?, slot: Slot?, patient: Patient?, service: Service?) : super(
+        id,
+        createdAt,
+        slot,
+        patient,
+        service
+    ) {
+    }
 
-class AppointmentFromManager : Appointment {
+    constructor() {}
+
     override fun createDocPackage(docPackage: DocPackage?): DocPackage {
         return DocPackageByManager()
     }

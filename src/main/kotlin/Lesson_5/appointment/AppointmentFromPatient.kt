@@ -10,7 +10,7 @@ import Lesson_5.slot.Slot
 import Lesson_5.slot.SlotByPatient
 
 
-class AppointmentFromPatient : Appointment {
+class AppointmentFromPatient : AppointmentImpl() {
     override fun createDocPackage(docPackage: DocPackage?): DocPackage {
         return DocPackageByPatient()
     }
